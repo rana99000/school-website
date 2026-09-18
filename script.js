@@ -571,6 +571,20 @@ navDropdowns.forEach((dropdown) => {
        - or Cycles → cycles.html
     */
 
+    /*
+       On small screens the dropdown panel is hidden and
+       Histoire / Cycles behave as normal links.
+    */
+
+    if (
+      window.matchMedia("(max-width: 900px)").matches
+    ) {
+
+      return;
+
+    }
+
+
     if (!dropdown.classList.contains("open")) {
 
       event.preventDefault();
